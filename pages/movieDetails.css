@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color:#000000;
+}
+
+span {
+  font-weight: normal;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(20, 29, 40);
+  padding: 10px 0 0 0;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 0 0 0;
+  color: white;
+  background-color: rgb(20, 29, 40);
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid rgb(20, 29, 40);
+  background-color: rgb(20, 29, 40);
+  box-shadow: inset 0 2px 10px rgba(120, 120, 120, 0.5);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: red;
+}
+
+input[type="search"] {
+  width: 60%;
+  height: 30px;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.details p {
+  font-weight: bold;
+}
+
+.container {
+  width: 60%;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: rgb(20, 29, 40);
+  color:  #ffffff;
+  border: 1px solid rgb(20, 29, 40);
+}
+
+.title {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posterUrl {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  background-color:#000000;
+  margin: 10px 0;
+}
+
+.details {
+  display: flex;
+}
+
+.details p {
+flex-grow: 1;
+}
+
+.wrapper-border {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 40px;
+  background-image: linear-gradient(0deg, #000000,rgb(20, 29, 40) );
+}
+
+.wrapper-border.upper {
+  margin-top: 20px;
+  background-image: linear-gradient(0deg, rgb(20, 29, 40), #000000);
+}
+
+.header-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/*header from main page*/
+
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header-left p {
+  color: white;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+.header-left i {
+  color: red;
+  margin: 0 10px 0 0;
+}
+
+.shadow {
+  border: 1px solid rgb(20, 29, 40);
+  background-color: rgb(20, 29, 40);
+  box-shadow: inset 0 2px 10px rgba(120, 120, 120, 0.5);
+}
+/*footer from main page*/
+
+.footer-logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo span {
+  text-transform: uppercase;
+  font-size: 8px;
+  color: red;
+}
+
+.footer-logo i {
+  color: red;
+}
+
+.footer-details {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer-details p {
+  font-size: 14px;
+}
+
+.footer-contact {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-contact p {
+  text-transform: uppercase;
+  display: inline;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-contact i {
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.footer-copyright p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.2;
+}
+
+.footer-content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*login modal */
+.login-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 192, 192, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 7;
+}
+
+.content-modal {
+  width: 500px;
+  height: 300px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border: 1px solid rgb(20, 29, 40);
+  box-shadow: 1px 3px 10px rgb(20, 29, 40);
+}
+
+.content-modal i {
+  color: red;
+  padding: 20px;
+}
+
+.login-input {
+  width: 60%;
+  display: block;
+  margin: 15px auto;
+}
+
+.login-close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: white;
+}
+
+.login-close:hover {
+  color: red;
+}
+
+.message {
+  color: white;
+}
+
+.message a {
+  color: red;
+  text-decoration: none;
+}
+
+.loginValidateMessage {
+  color: red;
+  display: none;
+  font-weight: bold;
+}
+
+/* register modal */
+
+.reg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 192, 192, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 7;
+}
+
+.reg-content {
+  width: 30%;
+  /* height: 300px; */
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border: 1px solid rgb(20, 29, 40);
+  box-shadow: 1px 3px 10px rgb(20, 29, 40);
+  z-index: 8;
+}
+
+.register-input {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+
+.reg-close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: white;
+}
+.reg-close:hover {
+  color: red;
+}
+
+.reg-content i {
+  color: red;
+  padding: 20px;
+}
+
+.reg-content a {
+  color: red;
+  text-decoration: none;
+}
+.messageb {
+  color: white;
+}
+
+.registerValidateMessage {
+  color: red;
+  display: none;
+  font-weight: bold;
+}
+
+
+@media (min-width: 320px) {
+  .reg-content {
+    width: 70%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .reg-content {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reg-content {
+    width: 45%;
+  }
+}
+@media (min-width: 1300px) {
+  .reg-content {
+    width: 35%;
+  }
+}
+
+.username, .far.fa-user {
+  color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .container,
+  .wrapper-border {
+    padding: 2px;
+    min-width: 100%;
+  }
+  .details {
+    display: inline-block;
+  }
+  .header-wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .footer-copyright p {
+    text-align: center;
+  }
+  .container-buttons {
+    display: block;
+  }
+  .header-left p {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .header-left p {
+    display: none;
+  }
+}
