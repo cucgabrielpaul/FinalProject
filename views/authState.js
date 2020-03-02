@@ -1,5 +1,3 @@
-
-
 function verifyLoginComun() {
   let userIconElement = document.querySelector(".far.fa-user");
   let loginToken = localStorage.getItem("accessToken");
@@ -15,14 +13,12 @@ function verifyLoginComun() {
     registerBtn.style.display = "none";
     userElement.style.display = "inline-block";
     userIconElement.style.display = "inline-block";
-
   } else {
     logoutBtn.style.display = "none";
     loginBtn.style.display = "inline-block";
     registerBtn.style.display = "inline-block";
     userElement.style.display = "none";
     userIconElement.style.display = "none";
-
   }
 }
 
@@ -33,30 +29,26 @@ function verifyLoginHome() {
   verifyLoginComun();
   for (let i = 0; i < deleteEditBtn.length; i++) {
     let button = deleteEditBtn[i];
-    console.log('mouseover added');
+
     button.parentElement.addEventListener("mouseover", () => {
       if (loginToken) {
         button.style.display = "block";
-        // addBtn.style.display = "inline-block";
       } else {
         button.style.display = "none";
       }
-    })
+    });
 
     button.parentElement.addEventListener("mouseout", () => {
-        button.style.display = "none";
-    })
+      button.style.display = "none";
+    });
   }
-  
 
-   if (loginToken) {
+  if (loginToken) {
     addBtn.style.display = "inline-block";
-   } else {
+  } else {
     addBtn.style.display = "none";
-
-   }
+  }
 }
-
 
 function verifyLoginDetails() {
   let loginToken = localStorage.getItem("accessToken");

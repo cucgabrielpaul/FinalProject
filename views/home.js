@@ -177,8 +177,8 @@ function addMovie() {
         modalElement.style.display = "none";
         for (let i = 0; i < inputValues.length; i++) {
           inputValues[i].value = "";
-           };
-           getAndDisplayMovies();
+        }
+        getAndDisplayMovies();
       });
     }
   });
@@ -361,28 +361,22 @@ document.querySelector(".messageb a").addEventListener("click", function() {
 
 //reset button
 
-
 let resetFiltersButton = document.querySelector(".reset-button");
 resetFiltersButton.addEventListener("click", resetFilter);
 
 function resetFilter() {
   var genreEl = document.getElementsByName("genre");
-  for(let i=0;i<genreEl.length;i++)
-  genreEl[0].checked = true;
+  for (let i = 0; i < genreEl.length; i++) genreEl[0].checked = true;
 
   let languageEl = document.getElementsByName("language");
-  for(let i=0;i<languageEl.length;i++)
-  languageEl[0].checked = true;
+  for (let i = 0; i < languageEl.length; i++) languageEl[0].checked = true;
 
   let yearEl = document.getElementsByName("year");
-  for(let i=0;i<yearEl.length;i++)
-  yearEl[0].checked = true;
+  for (let i = 0; i < yearEl.length; i++) yearEl[0].checked = true;
 
   let countryEl = document.getElementsByName("country");
-  for(let i=0;i<countryEl.length;i++)
-  countryEl[0].checked = true;
+  for (let i = 0; i < countryEl.length; i++) countryEl[0].checked = true;
 
-  document.querySelector(".search-value").value =""
+  document.querySelector(".search-value").value = "";
   getAndDisplayMovies();
-
 }
